@@ -1,0 +1,28 @@
+<ion-view view-title="{{title}}">
+  <ion-nav-bar class="bar-energized nav-title-slide-ios7">
+    <ion-nav-buttons side="left">
+      <button class="button rectangle-round-left" ng-click="goBack()">
+        <div class="navi-back">
+        </div>
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content scroll="true">
+
+    <ion-item>不使用指令</ion-item>
+    <div class="progress-main" ng-repeat="item in handleDataInfo">
+      <div class="progress-data">
+        <span>{{item.name}}</span>
+        <div class="skillbar clearfix " data-percent={{item.width}}>
+          <div class="skillbar-bar"></div>
+          <div class="skill-bar-percent">{{item.sum}}</div>
+        </div>
+      </div>
+      <p class="progress-rate">{{item.percent}}</p>
+    </div>
+
+    <ion-item>使用指令</ion-item>
+    <progress-per progress-data="handleDataInfo"></progress-per>
+
+  </ion-content>
+</ion-view>

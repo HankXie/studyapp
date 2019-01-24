@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="lib/angular-timeline/dist/angular-timeline.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/timeline.css" rel="stylesheet">
+    <link href="css/progress.css" rel="stylesheet">
+    <link href="css/hg.css" rel="stylesheet">
+
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="cordova.js"></script>
+    <script src="lib/echarts/dist/echarts.min.js"></script>
+    <script src="lib/angular-echarts/dist/angular-echarts.js"></script>
+    <script src="lib/progress/jquery.js"></script>
+    <script src="lib/qrcode/jquery.min.js"></script>
+    <script src="lib/qrcode/qrcode.js"></script>
+
+    <!-- your app's js -->
+    <!--controller-->
+    <script src="js/app.js"></script>
+    <script src="js/home/home.ctrl.js"></script>
+    <script src="js/img-touch/img-touch.ctrl.js"></script>
+    <script src="js/timeline/timeline.ctrl.js"></script>
+    <script src="js/echart/echart.ctrl.js"></script>
+    <script src="js/progress/progress.ctrl.js"></script>
+    <script src="js/popup/popup.ctrl.js"></script>
+    <script src="js/form/form.ctrl.js"></script>
+    <script src="js/localData/localData.ctrl.js"></script>
+    <script src="js/localData/localList.ctrl.js"></script>
+    <script src="js/localData/localData.ser.js"></script>
+    <script src="js/qrcode/qrcode.ctrl.js"></script>
+    <script src="js/common/storage.js"></script>
+    <script src="js/common/service.js"></script>
+    <script src="js/tab/tab.ctrl.js"></script>
+    <script src="js/sqliet/sqliet.ctrl.js"></script>
+    <script src="js/share/share.ctrl.js"></script>
+    <!--directive-->
+    <script src="js/directive/progress-percent.js"></script>
+    <script src="js/directive/qrcode.js"></script>
+    <!--lib-->
+    <script src="lib/img-touch/pinchzoom.js"></script>
+    <script src="lib/angular-timeline/dist/angular-timeline.js"></script>
+  </head>
+  <body ng-app="studyApp" ontouchstart = "return true;">
+  <ion-nav-bar class="bar-energized"></ion-nav-bar>
+  <ion-nav-view></ion-nav-view>
+  </body>
+</html>

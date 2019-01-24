@@ -1,0 +1,71 @@
+<ion-view view-title="{{title}}">
+  <ion-nav-bar class="bar-energized nav-title-slide-ios7">
+    <ion-nav-buttons side="left">
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
+  <ion-content scroll="true" has-header="true" has-bouncing="false" class="pannel home-page">
+
+    <div ng-repeat="item in menuListMain" ng-if="item.role">
+      <div class="home-feige">
+        <span class="typename">{{item.name}}</span>
+      </div>
+      <div class="icons-feilei">
+        <div class="row" ng-repeat="rowMenus in item.list">
+          <div class="col" ng-repeat="m in rowMenus">
+            <a ng-click="gotoMenu(m.menu)" ng-if="m.role">
+              <img ng-src="img/erp_icons/{{m.icon}}.png" >
+              <div class="media-body">{{m.title}}</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-feige">
+      <span class="typename">-----------方式2-----------</span>
+    </div>
+
+
+    <div class="icons-feilei">
+      <div class="row" ng-repeat="rowMenus in menuListChild">
+        <div class="col" ng-repeat="item in rowMenus">
+          <a ng-click="gotoMenu(item.menu)" ng-if="item.role">
+            <img ng-src="img/erp_icons/{{item.icon}}.png" >
+            <div class="media-body">{{item.title}}</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-feige">
+      <span class="typename">-----------方式3-----------</span>
+    </div>
+
+
+    <div class="icons-feilei">
+      <div class="row" ng-repeat="rowMenus in menuList">
+        <div class="col" ng-repeat="item in rowMenus">
+          <a ng-click="gotoMenu(item.menu)" ng-if="item.role">
+            <img ng-src="img/erp_icons/{{item.icon}}.png" >
+            <div class="media-body">{{item.title}}</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card" ng-click="goImgTouch()"><div class="item item-text-wrap" style="text-align: center;font-weight: bold;">点击放大图片</div></div>
+    <div class="card" ng-click="goTimeLine()"><div class="item item-text-wrap" style="text-align: center;font-weight: bold;">时间轴</div></div>
+    <div class="card" ng-click="goEchart()"><div class="item item-text-wrap" style="text-align: center;font-weight: bold;">echart图表效果</div></div>
+    <div class="card" ng-click="goProgress()"><div class="item item-text-wrap" style="text-align: center;font-weight: bold;">进度条效果</div></div>
+    <div class="card" ng-click="goPopup()"><div class="item item-text-wrap" style="text-align: center;font-weight: bold;">弹框效果及图片轮播</div></div>
+    <div class="card" ng-click="goForm()"><div class="item item-text-wrap" style="text-align: center;font-weight: bold;">表单</div></div>
+    <div class="card" ng-click="goLocalStorage()"><div class="item item-text-wrap" style="text-align: center;font-weight: bold;">本地存储</div></div>
+    <div class="card" ng-click="goQrCode()"><div class="item item-text-wrap" style="text-align: center;font-weight: bold;">二维码生成</div></div>
+    <div class="card" ng-click="goHgApp()"><div class="item item-text-wrap" style="text-align: center;font-weight: bold;">tab页面测试</div></div>
+    <div class="card" ng-click="goSqliet()"><div class="item item-text-wrap" style="text-align: center;font-weight: bold;">本地数据库Sqliet</div></div>
+    <div class="card" ng-click="goShare()"><div class="item item-text-wrap" style="text-align: center;font-weight: bold;">分享</div></div>
+
+  </ion-content>
+</ion-view>

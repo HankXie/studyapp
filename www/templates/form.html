@@ -1,0 +1,99 @@
+<ion-view view-title="{{title}}">
+  <ion-nav-bar class="bar-energized nav-title-slide-ios7">
+    <ion-nav-buttons side="left">
+      <button class="button rectangle-round-left" ng-click="goBack()">
+        <div class="navi-back">
+        </div>
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content scroll="true" delegate-handle="add_scroll_content">
+    <div class="item s-form-span" >
+      <span class="s-form-span-left"><p style="color: red;">*</p>名称1</span>
+      <span class="s-form-span-right">
+         <label class="item item-input s-form-input">
+          <input type="text" placeholder="绑定值"
+                 ng-model="addData.name1" ng-change="inputChanged()">
+        </label>
+        </span>
+    </div>
+
+    <div class="item s-form-span" >
+      <span class="s-form-span-left"><p style="color: red;">*</p>名称1</span>
+      <span class="s-form-span-right">
+         <label class="item item-input s-form-input">
+          <input type="text" placeholder="绑定值"
+                 ng-model="addData.name2" ng-change="inputChanged()">
+        </label>
+        </span>
+    </div>
+
+    <div class="item s-form-span" >
+      <span class="s-form-span-left "><p style="color: red;">*</p>span省略号</span>
+      <span class="s-form-span-overflow">
+        {{addData.name3}}
+        </span>
+    </div>
+
+    <div class="item s-form-span" >
+      <span class="s-form-span-left "><p style="color: red;">*</p>span换行</span>
+      <span class="s-form-span-break">
+        {{addData.name4}}
+        </span>
+    </div>
+
+    <div class="item s-form-span-column" >
+      <span class="s-form-span-left"><p style="color: red;">*</p>表格新增与减除</span>
+      <span class="s-form-span-right" style=" display: flex;display: -webkit-flex;flex-direction: column;-webkit-flex-direction: column;width: 100%;">
+
+            <div class="row">
+              <div class="col-detail col-20" style="background: #30c1ff;" ng-click="addArr()">
+                <div style="color: #fff"><img class="add-reduce-img" src="img/add.svg"/></div>
+              </div>
+              <div class="col-detail col-40" style="background: #30c1ff;">
+                <div style="color: #fff">日期</div>
+              </div>
+              <div class="col-detail col-40" style="background: #30c1ff;">
+                <div style="color: #fff">事件</div>
+              </div>
+            </div>
+
+            <div class="row" ng-repeat="item in addData.supResultsInfo">
+              <div class="col-detail col-20" ng-click="deleteArr($index)">
+                <div class="col-ctrl"><img class="add-reduce-img" src="img/reduce.svg"/></div>
+              </div>
+              <div class="col-detail col-40">
+                 <label class="item item-input s-form-input" >
+                     <input type="text" placeholder="" ng-model="item.result1">
+                   </label>
+              </div>
+              <div class="col-detail col-40">
+                   <label class="item item-input s-form-input">
+                     <input type="text" placeholder="" ng-model="item.result2">
+                   </label>
+              </div>
+            </div>
+
+          </span>
+    </div>
+
+    <ion-item>
+      <div class="scenic-input item-input item-select" data-tap-disabled="true">
+        <select ngc-select-search class="scenic-input-select"  ng-model="scenicSelect.ID"
+                ng-options="scenicList.ID as scenicList.NAME for scenicList in scenicList">
+          <option value="">--请选择--</option>
+        </select>
+      </div>
+    </ion-item>
+
+    <table>
+      <tr ng-repeat="x in scenicList">
+        <td>{{ x.NAME }}</td>
+        <td>{{ x.ID }}</td>
+        <td>{{ x.NAME }}</td>
+        <td>{{ x.ID }}</td>
+      </tr>
+    </table>
+
+  </ion-content>
+</ion-view>

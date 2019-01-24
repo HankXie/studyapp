@@ -1,0 +1,88 @@
+/* 时间轴 */
+.timeline-event {
+  margin-bottom: 0px !important;
+}
+
+timeline-badge.infos {
+  background-color: #47d09e !important;
+}
+
+.timeline:before {
+  width: 1px !important;
+  left: 24px !important;
+  margin-top: 30px !important;
+  background-color: #47d09e !important;
+}
+
+timeline-badge {
+  left: 16px !important;
+  width: 15px !important;
+  height: 15px !important;
+  top: 15px !important;
+  box-shadow: none !important;
+}
+
+timeline-panel {
+  float: left !important;
+  width: 85% !important;
+  padding: 13px 0px 6px 0px !important;
+  margin-left: 39px !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+timeline-panel:before {
+  visibility: hidden !important;
+}
+
+timeline-panel:after {
+  visibility: hidden !important;
+  display: none !important;
+}
+
+timeline-panel .time {
+  font-size: 14px;
+  font-family: 'PingFangSC-Regular';
+}
+
+timeline-panel .detail {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  margin-top: 10px;
+}
+
+timeline-panel .detail .linename {
+  font-size: 16px;
+  max-width: 80%;
+  color: #1c1c1c;
+  display: inline-block;
+  font-family: 'PingFangSC-Medium';
+}
+
+timeline-panel .detail .linelevel {
+  position: absolute;
+  right: 18%;
+  border-radius: 4px;
+  color: white;
+  padding: 1px 5px 1px 5px;
+  font-size: 11px;
+}
+
+timeline-panel .detail .linelevel-g {
+  background-color: #f27373;
+}
+
+timeline-panel .detail .linelevel-p {
+  background-color: #e29431;
+}
+
+timeline-panel .detail .linenum {
+  float: right;
+  font-size: 14px;
+  color: #323232;
+}

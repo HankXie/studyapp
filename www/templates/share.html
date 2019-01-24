@@ -1,0 +1,24 @@
+<ion-view view-title="{{title}}">
+  <ion-nav-bar class="bar-energized nav-title-slide-ios7">
+    <ion-nav-buttons side="left">
+      <button class="button rectangle-round-left" ng-click="goBack()">
+        <div class="navi-back">
+        </div>
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content scroll="true">
+    <div class="card" ng-click="shareAnywhere('message',null,'www/img/1.jpeg',null)"><div class="item item-text-wrap" style="text-align: center;font-weight: bold;">分享</div></div>
+    <div class="card" ng-click="shareAnywhere('Message only')">message only</div>
+    <div class="card" ng-click="shareAnywhere('Message and subject', 'The subject')">message and subject</div>
+    <div class="card" ng-click="shareAnywhere(null, null, null, 'http://www.x-services.nl')">link only</div>
+    <div class="card" ng-click="shareAnywhere('Message and link', null, null, 'http://www.x-services.nl')">message and link</div>
+    <div class="card" ng-click="shareAnywhere(null, null, 'https://www.google.nl/images/srpr/logo4w.png', null)">image only</div>
+    <div class="card" ng-click="shareAnywhere(null, 'Android filename', 'data:image/png;base64,R0lGODlhDAAMALMBAP8AAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAUKAAEALAAAAAAMAAwAQAQZMMhJK7iY4p3nlZ8XgmNlnibXdVqolmhcRQA7', null)">base64 image only</div>
+    <div class="card" ng-click="shareAnywhere('Message and image', null, 'https://www.google.nl/images/srpr/logo4w.png', null)">message and image</div>
+    <div class="card" ng-click="shareAnywhere('Message, image and link', null, 'https://www.google.nl/images/srpr/logo4w.png', 'http://www.x-services.nl')">message, image and link</div>
+    <div class="card" ng-click="shareAnywhere('Message, subject, image and link', 'The subject', 'https://www.google.nl/images/srpr/logo4w.png', 'http://www.x-services.nl')">message, subject, image and link</div>
+    <div class="card" ng-click="shareViaTwitter()"><div class="item item-text-wrap" style="text-align: center;font-weight: bold;">分享推特</div></div>
+
+  </ion-content>
+</ion-view>

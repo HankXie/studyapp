@@ -1,0 +1,36 @@
+<ion-view view-title="{{title}}">
+  <ion-nav-bar class="bar-energized nav-title-slide-ios7">
+    <ion-nav-buttons side="left">
+      <button class="button rectangle-round-left" ng-click="goBack()">
+        <div class="navi-back">
+        </div>
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content scroll="true">
+    <div style="display: flex;align-items: center;justify-content: center;flex-direction: row;">
+    <div class="item s-form-span" style="width: 80%;">
+      <span class="s-form-span-left">请输入链接</span>
+      <span class="s-form-span-right">
+         <label class="item item-input s-form-input">
+          <input type="text" placeholder="扫出来的值"
+                 ng-model="urlData.url">
+        </label>
+        </span>
+    </div>
+      <button class="button button-calm" style="margin: 5px;height: 50px;" ng-click="qrCode()">生成</button>
+    </div>
+
+    <div class="qrcode-center">
+      <div id="qrcode">
+      </div>
+    </div>
+
+    <!--<qrcode url="urlData.url"></qrcode>-->
+
+    <div style="text-align: center;">
+      <canvas id="c"></canvas>
+    </div>
+
+  </ion-content>
+</ion-view>

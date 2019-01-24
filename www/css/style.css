@@ -1,0 +1,361 @@
+/* Empty. Add your own CSS if you like */
+.bar.bar-energized {
+  border-color: #1baaeb;
+  background-color: #1baaeb;
+  background-image: linear-gradient(0deg, #1baaeb, #1baaeb 50%, transparent 50%);
+  color: #fff;
+}
+
+/* 导航栏 */
+.rectangle-round-left {
+  border-radius: 0px 18px 18px 0px;
+  width: 45px;
+  height: 36px;
+  left: -4px;
+  top: -1px;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border: 0px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+
+.rectangle-round-left .navi-back {
+  width: 16px;
+  height: 17px;
+  border: 0px;
+  background: url('../img/navi-back.svg') left top no-repeat;
+  background-size: 100% 100%;
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.rectangle-round-right {
+  /*position: absolute;*/
+  width: 45px;
+  height: 36px;
+  right: -4px;
+  top: -1px;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border: none;
+  border-radius: 18px 0 0 18px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+
+.rectangle-round-right .add {
+  width: 16px;
+  height: 16px;
+  border: 0px;
+  background: url('../img/plus.svg') left top no-repeat;
+  background-size: 100% 100%;
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+/*****************轮播图圆点效果***********************/
+.slider-pager .slider-pager-page {
+  display: inline-block;
+  margin: 0 3px;
+  width: 15px;
+  color: #fff;
+  text-decoration: none;
+  opacity: .3;
+  font-size: 5px;
+}
+
+.col{
+  background-color: #F9FAFB;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  text-align: center;
+}
+
+/*************************表单********************/
+.s-form-span {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  background: white;
+}
+
+.s-form-span-column{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  font-size: 12px;
+}
+
+.s-form-span-left {
+  display: flex;
+  display: -webkit-flex;
+  text-align: left;
+  align-items: center;
+  -webkit-align-items: center;
+  float: left;
+  color: #6d6d6d;
+  width: 40%;
+  font-size: 14px;
+}
+
+.s-form-span-right {
+  display: flex;
+  display: -webkit-flex;
+  text-align: left;
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  float: right;
+  width: 60%;
+  font-size: 14px;
+  color: #1c1c1c;
+  word-wrap: break-word;
+  word-break: normal;
+  white-space: normal;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+.s-form-input{
+  width: 100%;
+  background: white;
+  height: 30px;
+  border-color: #979797;
+}
+
+/*超出部分省略号显示*/
+.s-form-span-overflow{
+  width:60%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  word-break:keep-all;
+}
+
+/*自动换行*/
+.s-form-span-break{
+  width:60%;
+  word-break:normal;
+  display:block;
+  white-space:pre-wrap;
+  overflow:hidden;
+  color:#0066CC;
+}
+
+.col-detail {
+  background: #fff;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+
+.col-ctrl {
+  display: flex;
+  display: -webkit-flex;
+  text-align: left;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  word-break: normal;
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+
+.add-reduce-img{
+  width: 20px;
+  height: 20px;
+}
+
+/*气泡*/
+.speech-bubble {
+  position: relative;
+  background: #39bb4b;
+  border-radius: .4em;
+  width: 50%;
+  height: 150px;
+}
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 33px solid transparent;
+  border-top-color: #39bb4b;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -16.5px;
+  margin-bottom: -33px;
+}
+
+
+.qrcode-center{
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  margin-top: 10px;
+}
+
+/******下拉框******/
+.scenic-input {
+  margin: 0 16px 0px 16px;
+  border-radius: 4px;
+  border: 1px solid #8e8e8e;
+  height: 25px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+}
+
+.scenic-input-select {
+  color: #1c1c1c;
+  font-size: 14px;
+  float: left;
+  background: none;
+  left: 10px !important;
+  text-align: left;
+  padding: 0px !important;
+  direction: ltr !important;
+  width: 100% !important;
+}
+
+.tab-produceprog {
+  width: 100%;
+}
+
+.tab-lookdata-bom {
+  width: 110%;
+}
+
+.border-t1 {
+  border-top: 1px #E4DEDE solid;
+}
+
+.border-r1 {
+  border-right: 1px #E4DEDE solid;
+}
+
+.border-b1 {
+  border-bottom: 1px #E4DEDE solid;
+}
+
+.scan-left {
+  float: left;
+  width: 90%;
+}
+/****table***/
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd)	{
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+
+/* pannel 首页样式 */
+.pannel a {
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  font-size: 14px;
+}
+
+.pannel .media-body {
+  margin-top: 5px;
+}
+
+.pannel .col {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.home-page {
+  /*margin-top: 57px;*/
+}
+/* 分割样式 */
+.home-feige {
+  padding-top: 8px;
+  height: 21px;
+  width: 100%;
+  text-align: center;
+  line-height: 21px;
+  margin: 0 auto;
+  background-color: #F8F8F8;
+  white-space: nowrap;
+  border-spacing: 0px;
+  box-sizing: border-box;
+  display: table;
+}
+
+.home-feige:before,
+.home-feige:after {
+  content: '';
+  display: table-cell;
+  width: 50%;
+  background: -webkit-linear-gradient(#dcdcdc, #dcdcdc) repeat-x left center;
+  background: linear-gradient(#dcdcdc, #dcdcdc) repeat-x left center;
+  background-size: 1px 1px;
+}
+
+.home-feige .typename {
+  background: white;
+  padding: 2px 17px 2px 17px;
+  text-align: center;
+  height: 21px;
+  color: #4a4a4a;
+  font-size: 10px;
+  border: solid 1px #dcdcdc;
+  border-radius: 10px;
+}
+
+.icons-feilei {
+  padding-top: 8px;
+}
+
+.icons-feilei img {
+  width: 90%;
+  height: auto;
+}
+
+.div-relative{
+  position:relative;
+  background:rgba(0, 0, 0, 0.1);
+  width:100%;
+  height:100%;
+  z-index:100;
+}
+.div-a{
+  position:absolute;
+  background:#F00;
+  width:50%;
+  height:50%;
+  z-index: 999;
+}
+

@@ -1,0 +1,81 @@
+<ion-view view-title="{{title}}">
+  <ion-nav-bar class="bar-energized nav-title-slide-ios7">
+    <ion-nav-buttons side="left">
+      <button class="button rectangle-round-left" ng-click="goBack()">
+        <div class="navi-back">
+        </div>
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content scroll="true">
+
+    <div class="item s-form-span" >
+      <span class="s-form-span-left"><p style="color: red;">*</p>编号</span>
+      <span class="s-form-span-right">
+         <label class="item item-input s-form-input">
+          <input type="text" placeholder="绑定值"
+                 ng-model="addData.unitno">
+        </label>
+        </span>
+    </div>
+
+    <div class="item s-form-span" >
+      <span class="s-form-span-left"><p style="color: red;">*</p>名称1</span>
+      <span class="s-form-span-right">
+         <label class="item item-input s-form-input">
+          <input type="text" placeholder="绑定值"
+                 ng-model="addData.unitname" >
+        </label>
+        </span>
+    </div>
+
+    <div class="item s-form-span" >
+      <span class="s-form-span-left"><p style="color: red;">*</p>名称2</span>
+      <span class="s-form-span-right">
+         <label class="item item-input s-form-input">
+          <input type="text" placeholder="绑定值"
+                 ng-model="addData.fullname" >
+        </label>
+        </span>
+    </div>
+
+    <div class="item s-form-span" >
+      <span class="s-form-span-left"><p style="color: red;">*</p>部门</span>
+      <span class="s-form-span-right">
+         <label class="item item-input s-form-input">
+          <input type="text" placeholder="绑定值"
+                 ng-model="addData.parunit" >
+        </label>
+        </span>
+    </div>
+    <div class="list">
+    <table class="tab-produceprog tab-lookdata-bom">
+
+      <thead>
+      <tr>
+        <td class="border-t1 border-r1 border-b1">编号</td>
+        <td class="border-t1 border-r1 border-b1">名称1</td>
+        <td class="border-t1 border-r1 border-b1">名称2</td>
+        <td class="border-t1 border-r1 border-b1">部门</td>
+        <td class="border-t1 border-r1 border-b1">操作</td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="item in dataList">
+        <td class="border-t1  border-b1">{{item.unitno}}</td>
+        <td class="border-t1  border-b1">{{item.unitname}}</td>
+        <td class="border-t1  border-b1">{{item.fullname}}</td>
+        <td class="border-t1  border-b1">{{item.parunit}}</td>
+        <td class="border-t1  border-b1">
+          <a ng-click="delete (item.unitno)">删除</a>
+          <a ng-click="update(item.unitno)">修改</a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    </div>
+    <button class="button button-royal" ng-click="insert()">插入数据</button>
+    <button class="button button-dark" ng-click="select()">查询</button>
+
+  </ion-content>
+</ion-view>

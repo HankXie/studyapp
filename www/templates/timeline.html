@@ -1,0 +1,34 @@
+<ion-view view-title="{{title}}">
+  <ion-nav-bar class="bar-energized nav-title-slide-ios7">
+    <ion-nav-buttons side="left">
+      <button class="button rectangle-round-left" ng-click="goBack()">
+        <div class="navi-back">
+        </div>
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content scroll="true">
+
+    <timeline>
+      <timeline-event ng-repeat="event in teamDataList" side="right">
+        <timeline-badge class="infos">
+        </timeline-badge>
+        <timeline-panel class="infos">
+              <span class="time">
+                {{event.hour}}
+              </span>
+          <div class="detail" ng-repeat="item in event.data">
+            <span class="linename">{{item.customerName}}</span>
+            <div style="float: right;">
+                  <span class="linenum">
+                  {{item.reserveNumber}}人
+                  </span>
+            </div>
+
+          </div>
+        </timeline-panel>
+      </timeline-event>
+    </timeline>
+
+  </ion-content>
+</ion-view>

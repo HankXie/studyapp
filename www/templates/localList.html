@@ -1,0 +1,76 @@
+<ion-view view-title="{{title}}">
+  <ion-nav-bar class="bar-energized nav-title-slide-ios7">
+    <ion-nav-buttons side="left">
+      <button class="button rectangle-round-left" ng-click="goBack()">
+        <div class="navi-back">
+        </div>
+      </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+      <button class="button rectangle-round-right" ng-click="goLocalStorageData()">
+        <div class="add">
+
+        </div>
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content scroll="true">
+
+    <div class="card" ng-repeat="item in storageData">
+      <div class="item s-form-span" style="background: greenyellow">
+        <span class="s-form-span-left ">日期</span>
+        <span class="s-form-span-overflow">
+        {{item.date}}
+        </span>
+      </div>
+      <div class="item s-form-span" >
+        <span class="s-form-span-left">摘要</span>
+        <span class="s-form-span-overflow">
+        {{item.abstract}}
+        </span>
+      </div>
+      <div class="item s-form-span" >
+        <span class="s-form-span-left">购买物品</span>
+        <span class="s-form-span-overflow">
+        {{item.buyThings}}
+        </span>
+      </div>
+      <div class="item s-form-span" >
+        <span class="s-form-span-left">数量</span>
+        <span class="s-form-span-overflow">
+        {{item.num}}
+        </span>
+      </div>
+      <div class="item s-form-span" >
+        <span class="s-form-span-left">单价</span>
+        <span class="s-form-span-overflow">
+        {{item.price}}
+        </span>
+      </div>
+      <div class="item s-form-span" >
+        <span class="s-form-span-left">支付方式</span>
+        <span class="s-form-span-overflow">
+        {{item.pay}}
+        </span>
+      </div>
+      <div class="item s-form-span" >
+        <span class="s-form-span-left">存入</span>
+        <span class="s-form-span-overflow">
+        {{item.in}}
+        </span>
+      </div>
+      <div class="item s-form-span" >
+        <span class="s-form-span-left">支出</span>
+        <span class="s-form-span-overflow">
+        {{item.out}}
+        </span>
+      </div>
+      <div class="item s-form-span" >
+        <span class="s-form-span-left">余额</span>
+        <span class="s-form-span-overflow">
+        {{item.money}}
+        </span>
+      </div>
+    </div>
+
+  </ion-content>

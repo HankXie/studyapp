@@ -1,0 +1,28 @@
+<ion-view view-title="{{title}}">
+  <ion-nav-bar class="bar-energized nav-title-slide-ios7">
+    <ion-nav-buttons side="left">
+      <button class="button rectangle-round-left" ng-click="goBack()">
+        <div class="navi-back">
+        </div>
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content scroll="true">
+
+    <ion-item>饼图自定义颜色测试</ion-item>
+      <div id="id0002" style="width: 100%;height: 350px; padding: 0;margin: 0; border-width: 0; ">
+      </div>
+
+    <!-- 饼图 -->
+    <ion-item>饼图测试</ion-item>
+    <div>
+      <donut-chart config="donutConfig" data="dataList.incomeData">
+      </donut-chart>
+    </div>
+
+    <ion-item>柱状图测试</ion-item>
+    <div id="id0001" style="width: 100%;height: 400px; padding: 0;margin: 0; border-width: 0; ">
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,96 @@
+<ion-view view-title="{{title}}">
+  <ion-nav-bar class="bar-energized nav-title-slide-ios7">
+    <ion-nav-buttons side="left">
+      <button class="button rectangle-round-left" ng-click="goBack()">
+        <div class="navi-back">
+        </div>
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content scroll="true">
+
+    <div class="item s-form-span">
+      <span class="s-form-span-left ">日期</span>
+      <span class="s-form-span-overflow">
+        {{searchData.date}}
+        </span>
+    </div>
+    <div class="item s-form-span" >
+      <span class="s-form-span-left">摘要</span>
+      <span class="s-form-span-right">
+         <label class="item item-input s-form-input">
+          <input type="text" placeholder=""
+                 ng-model="searchData.abstract">
+        </label>
+        </span>
+    </div>
+    <div class="item s-form-span" >
+      <span class="s-form-span-left">购买物品</span>
+      <span class="s-form-span-right">
+         <label class="item item-input s-form-input">
+          <input type="text" placeholder=""
+                 ng-model="searchData.buyThings">
+        </label>
+        </span>
+    </div>
+    <div class="item s-form-span" >
+      <span class="s-form-span-left">数量</span>
+      <span class="s-form-span-right">
+         <label class="item item-input s-form-input">
+          <input type="text" placeholder=""
+                 ng-model="searchData.num">
+        </label>
+        </span>
+    </div>
+    <div class="item s-form-span" >
+      <span class="s-form-span-left">单价</span>
+      <span class="s-form-span-right">
+         <label class="item item-input s-form-input">
+          <input type="text" placeholder=""
+                 ng-model="searchData.price">
+        </label>
+        </span>
+    </div>
+    <div class="item s-form-span" >
+      <span class="s-form-span-left">支付方式</span>
+      <span class="s-form-span-right">
+         <label class="item item-input s-form-input">
+          <input type="text" placeholder=""
+                 ng-model="searchData.pay">
+        </label>
+        </span>
+    </div>
+    <div class="item s-form-span" >
+      <span class="s-form-span-left">存入</span>
+      <span class="s-form-span-right">
+         <label class="item item-input s-form-input">
+          <input type="text" placeholder=""
+                 ng-model="searchData.in">
+        </label>
+        </span>
+    </div>
+    <div class="item s-form-span" >
+      <span class="s-form-span-left">支出</span>
+      <span class="s-form-span-right">
+         <label class="item item-input s-form-input">
+          <input type="text" placeholder=""
+                 ng-model="searchData.out">
+        </label>
+        </span>
+    </div>
+    <div class="item s-form-span" >
+      <span class="s-form-span-left">余额</span>
+      <span class="s-form-span-right">
+         <label class="item item-input s-form-input">
+          <input type="text" placeholder=""
+                 ng-model="searchData.money">
+        </label>
+        </span>
+    </div>
+
+    <div  style="display: flex;justify-content: center;align-items: center;margin-top: 10px;">
+        <button class="button button-calm" style="width: 90%;" ng-click="setInputInfo()">确定</button>
+    </div>
+
+  </ion-content>
+</ion-view>
