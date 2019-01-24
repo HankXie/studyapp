@@ -8,7 +8,6 @@ angular.module('studyApp.controllers')
     $scope.goBack = function () {
       $ionicHistory.goBack();
     };
-
     $scope.gotoMenu=function (url) {
       $location.path(url);
     };
