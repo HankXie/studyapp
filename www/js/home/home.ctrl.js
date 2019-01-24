@@ -6,126 +6,35 @@ angular.module('studyApp.controllers')
   .controller('HomeController', function ($scope, $rootScope,HttpRq,$location,Storage) {
     $scope.title = '主页';
 
-    $scope.goImgTouch=function () {
-      $location.path('/img-touch');
-    };
-
-    $scope.goTimeLine=function () {
-      $location.path('/timeline');
-    };
-
-    $scope.goEchart=function () {
-      $location.path('/echart');
-    };
-
-    $scope.goProgress=function () {
-      $location.path('/progress');
-    };
-
-    $scope.goPopup=function () {
-      $location.path('/popup');
-    };
-
-    $scope.goForm=function () {
-      $location.path('/form');
-    };
-
-    $scope.goLocalStorage=function () {
-      $location.path('/localList');
-    };
-
-    $scope.goQrCode=function () {
-      $location.path('/qrcode');
-    };
-
-    $scope.goHgApp=function () {
-      $location.path('/tab');
-    };
-
-    $scope.goSqliet=function () {
-      $location.path('/sqliet');
-    };
-
-    $scope.goShare=function () {
-      $location.path('/share');
-    };
-
-
-
-
-    $scope.gotoMenu=function (url) {
+    $scope.goToPage=function (url) {
       $location.path(url);
     };
-    $scope.menuListChild = [];
-    $scope.menuListMain=[
-      {
-        name:'测试1',
-        role:true,
-        list:[
-          [
-            { menu:'/sqliet', icon:'produceProgress-2',title:'123', role:true },
-            { menu:'2', icon:'history-2',title:'123', role:true },
-            { menu:'3', icon:'sysSetting-2',title:'123', role:false}
-          ],
-          [
-            { menu:'/sqliet', icon:'produceProgress-2',title:'123', role:true },
-            { menu:'2', icon:'history-2',title:'123', role:false },
-            { menu:'3', icon:'sysSetting-2',title:'123', role:true}
-          ]
-        ]
-      },
-      {
-        name:'测试2',
-        role:false,
-        list:[
-          [
-            {menu: '1', icon: 'qcmng', title: '123', role: true},
-            {menu: '2', icon: 'repair-progress', title: '123', role: true},
-            {menu: '3', icon: 'operatorList-2', title: '123', role: true}
-          ]
-        ]
-      },
-      {
-        name:'测试3',
-        role:true,
-        list:[
-          [
-            {menu: '1', icon: 'warehourse', title: '123', role: true},
-            {menu: '2', icon: 'fileupload', title: '123', role: true},
-            {menu: '3', icon: 'localdata', title: '123', role: true}
-          ]
-        ]
-      }
+
+    $scope.menus=[
+      {title:"点击放大图片", url:"/img-touch",role:true},
+      {title:"时间轴", url:"/timeline",role:true},
+      {title:"echart图表效果", url:"/echart",role:true},
+      {title:"进度条效果", url:"/progress",role:true},
+      {title:"弹框效果及图片轮播", url:"/popup",role:true},
+      {title:"表单", url:"/form",role:true},
+      {title:"本地存储", url:"/localList",role:true},
+      {title:"二维码生成", url:"/qrcode",role:true},
+      {title:"tab页面测试", url:"/tab",role:true},
+      {title:"本地数据库Sqliet", url:"/sqliet",role:true},
+      {title:"分享", url:"/share",role:true},
+      {title:"菜单定制", url:"/menu",role:true}
     ];
 
-    $scope.menuList=[
-            { menu:'/sqliet', icon:'produceProgress-2',title:'123', role:true },
-            { menu:'2', icon:'history-2',title:'123', role:true },
-            { menu:'3', icon:'sysSetting-2',title:'123', role:true},
-            { menu:'/sqliet', icon:'produceProgress-2',title:'123', role:true },
-            { menu:'2', icon:'history-2',title:'123', role:false },
-            { menu:'3', icon:'sysSetting-2',title:'123', role:true}
-    ];
 
-   initMenu();
-    function  initMenu() {
-      menuFunc();
-    }
-
-    function menuFunc() {
-      $scope.menuListChild=HttpRq.getMenuChild($scope.menuListMain[0].list);
-
-      $scope.menuListMain=HttpRq.getMenuMain( $scope.menuListMain);
-    }
-    $scope.menuList = getNewRoleMenu($scope.menuList,3);
+    $scope.menus = getNewRoleMenu($scope.menus,3);
     function getNewRoleMenu(menuList,col) {//col 列数
       //将获取的原始数据对$scope.menuList赋值
       var menuList2=[];//存放获取来的有权限的菜单
       var menuList3=[[],[],[],[]];
       for(var i=0;i<menuList.length;i++){
-          if(menuList[i].role){//role为true即有权限
-            menuList2.push(menuList[i]);//此时的数据为一行多列的格式
-          }
+        if(menuList[i].role){//role为true即有权限
+          menuList2.push(menuList[i]);//此时的数据为一行多列的格式
+        }
       }
       var ind=-1;
       for(var i=0;i<menuList2.length;i++){//将一行多列的数据处理成，多行3列的格式
@@ -145,6 +54,5 @@ angular.module('studyApp.controllers')
       menuList=menuList3;
       return menuList;
     }
-
 
   });

@@ -116,6 +116,13 @@ angular.module('studyApp', [
         controller: 'SqlietCtrl'
       })
 
+      .state('menu', {
+        cache: false,
+        url: '/menu',
+        templateUrl: 'templates/menu.html',
+        controller: 'MenuCtrl'
+      })
+
     ;
 
     //otherwise defined at  default.routes.js
