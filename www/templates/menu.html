@@ -1,0 +1,61 @@
+<ion-view view-title="{{title}}">
+  <ion-nav-bar class="bar-energized nav-title-slide-ios7">
+    <ion-nav-buttons side="left">
+      <button class="button rectangle-round-left" ng-click="goBack()">
+        <div class="navi-back">
+        </div>
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content scroll="true" has-header="true" has-bouncing="false" class="pannel home-page">
+
+    <div ng-repeat="item in menuListMain" ng-if="item.role">
+      <div class="home-feige">
+        <span class="typename">{{item.name}}</span>
+      </div>
+      <div class="icons-feilei">
+        <div class="row" ng-repeat="rowMenus in item.list">
+          <div class="col" ng-repeat="m in rowMenus">
+            <a ng-click="gotoMenu(m.menu)" ng-if="m.role">
+              <img ng-src="img/erp_icons/{{m.icon}}.png" >
+              <div class="media-body">{{m.title}}</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-feige">
+      <span class="typename">-----------方式2-----------</span>
+    </div>
+
+
+    <div class="icons-feilei">
+      <div class="row" ng-repeat="rowMenus in menuListChild">
+        <div class="col" ng-repeat="item in rowMenus">
+          <a ng-click="gotoMenu(item.menu)" ng-if="item.role">
+            <img ng-src="img/erp_icons/{{item.icon}}.png" >
+            <div class="media-body">{{item.title}}</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-feige">
+      <span class="typename">-----------方式3-----------</span>
+    </div>
+
+
+    <div class="icons-feilei">
+      <div class="row" ng-repeat="rowMenus in menuList">
+        <div class="col" ng-repeat="item in rowMenus">
+          <a ng-click="gotoMenu(item.menu)" ng-if="item.role">
+            <img ng-src="img/erp_icons/{{item.icon}}.png" >
+            <div class="media-body">{{item.title}}</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
